@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+	<title>食分,健康真相, 从未如此接近</title>
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+
+<header class="header">
+	<div class="container">
+		<a href="index.html" class="header-logo">食分</a>
+		<div class="header-content">健康真相, 从未如此接近</div>
+		<div class="header-nav">
+			<ul class="nav-content">
+				<div class="nav-search-panel">
+					<input id="keywords" type="text" placeholder="输入食品名称或条码下方数字">
+					<input type="button" value="搜索" onclick="result()">
+				</div>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<section class="content">
+	<div class="container">
+		<div class="main-body">
+			<div class="row">
+				<div class="panel-body">
+					<div class="type-body">
+                        <div class="tb-left">
+							<div class="tbl-title">商品分类</div>
+							<table class="tbl-table">
+								<tr class="active">
+                                    <td>
+										<ul>
+											<span id="momChild"  onclick="showProduct($(this))">母婴产品</span>
+											<li onclick="tagSeleted(this)">奶粉</li>
+											<li onclick="tagSeleted(this)">纯牛奶</li>
+											<li onclick="tagSeleted(this)">复原乳饮品</li>
+											<li onclick="tagSeleted(this)">奶油</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<span id="snack"  onclick="showProduct($(this))">休闲零食</span>
+											<li onclick="tagSeleted(this)">奶粉</li>
+											<li onclick="tagSeleted(this)">纯牛奶</li>
+											<li onclick="tagSeleted(this)">复原乳饮品</li>
+											<li onclick="tagSeleted(this)">奶油</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<span id="dairy" onclick="showProduct($(this))">牛奶/乳制品</span>
+											<li onclick="tagSeleted(this)">奶粉</li>
+											<li onclick="tagSeleted(this)">纯牛奶</li>
+											<li onclick="tagSeleted(this)">复原乳饮品</li>
+											<li onclick="tagSeleted(this)">奶油</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<span id="drink" onclick="showProduct($(this))">饮料</span>
+											<li onclick="tagSeleted(this)">奶粉</li>
+											<li onclick="tagSeleted(this)">纯牛奶</li>
+											<li onclick="tagSeleted(this)">复原乳饮品</li>
+											<li onclick="tagSeleted(this)">奶油</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<span id="instantDrink" onclick="showProduct($(this))">冲调食品</span>
+											<li onclick="tagSeleted(this)">奶粉</li>
+											<li onclick="tagSeleted(this)" class="active">纯牛奶</li>
+											<li onclick="tagSeleted(this)">复原乳饮品</li>
+											<li onclick="tagSeleted(this)">奶油</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<span id="healthy" onclick="showProduct($(this))">保健食品</span>
+											<li onclick="tagSeleted(this)">奶粉</li>
+											<li onclick="tagSeleted(this)" class="active">纯牛奶</li>
+											<li onclick="tagSeleted(this)">复原乳饮品</li>
+											<li onclick="tagSeleted(this)">奶油</li>
+										</ul>
+									</td>
+								</tr>
+
+							</table>
+						</div>
+						<div class="tb-right">
+							<table class="result-table">
+								<tr>
+									<td>
+										<a class="rt-img" href="product.html">
+											<img src="images/kbk.jpg" width="150px">
+										</a>
+									</td>
+									<td>
+										<div class="rt-food">
+											<div class="rtf-name">可比克 牛排味薯条</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">健康指数</span>
+												<span class="rtf-health-point">6.8</span>
+											</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">禁忌提示</span>
+                                               <span class="rtf-tag">
+                                               	  <span>糖尿病</span>
+                                               	  <span>冠心病</span>
+                                               	  <span>痤疮</span>
+                                               	  <span>等7个风险</span>
+                                               </span>
+											</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">成分预警</span>
+                                               <span class="rtf-tag">
+                                               	  <span>香精</span>
+                                               	  <span>反式脂肪</span>
+                                               	  <span>增稠剂</span>
+                                               	  <span>等5个风险</span>
+                                               </span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a class="rt-img" href="product.html">
+											<img src="images/kbk.jpg" width="150px">
+										</a>
+									</td>
+									<td>
+										<div class="rt-food">
+											<div class="rtf-name">可比克 牛排味薯条</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">健康指数</span>
+												<span class="rtf-health-point">6.8</span>
+											</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">禁忌提示</span>
+                                               <span class="rtf-tag">
+                                               	  <span>糖尿病</span>
+                                               	  <span>冠心病</span>
+                                               	  <span>痤疮</span>
+                                               	  <span>等7个风险</span>
+                                               </span>
+											</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">成分预警</span>
+                                               <span class="rtf-tag">
+                                               	  <span>香精</span>
+                                               	  <span>反式脂肪</span>
+                                               	  <span>增稠剂</span>
+                                               	  <span>等5个风险</span>
+                                               </span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a class="rt-img" href="product.html">
+											<img src="images/kbk.jpg" width="150px">
+										</a>
+									</td>
+									<td>
+										<div class="rt-food">
+											<div class="rtf-name">可比克 牛排味薯条</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">健康指数</span>
+												<span class="rtf-health-point">6.8</span>
+											</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">禁忌提示</span>
+                                               <span class="rtf-tag">
+                                               	  <span>糖尿病</span>
+                                               	  <span>冠心病</span>
+                                               	  <span>痤疮</span>
+                                               	  <span>等7个风险</span>
+                                               </span>
+											</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">成分预警</span>
+                                               <span class="rtf-tag">
+                                               	  <span>香精</span>
+                                               	  <span>反式脂肪</span>
+                                               	  <span>增稠剂</span>
+                                               	  <span>等5个风险</span>
+                                               </span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a class="rt-img" href="product.html">
+											<img src="images/kbk.jpg" width="150px">
+										</a>
+									</td>
+									<td>
+										<div class="rt-food">
+											<div class="rtf-name">可比克 牛排味薯条</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">健康指数</span>
+												<span class="rtf-health-point">6.8</span>
+											</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">禁忌提示</span>
+                                               <span class="rtf-tag">
+                                               	  <span>糖尿病</span>
+                                               	  <span>冠心病</span>
+                                               	  <span>痤疮</span>
+                                               	  <span>等7个风险</span>
+                                               </span>
+											</div>
+											<div class="rtf-attr">
+												<span class="rtf-title">成分预警</span>
+                                               <span class="rtf-tag">
+                                               	  <span>香精</span>
+                                               	  <span>反式脂肪</span>
+                                               	  <span>增稠剂</span>
+                                               	  <span>等5个风险</span>
+                                               </span>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+							<div class="page tbl-page">
+								<div class="prev">上一页</div>
+								<div class="pagenum">
+									<span class="active">1</span>
+									<span>2</span>
+									<span>3</span>
+									<span>4</span>
+									<span>5</span>
+									<span>6</span>
+									<span>7</span>
+									<span>8</span>
+									<span>9</span>
+									<span>10</span>
+								</div>
+								<div class="next">下一页</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="owner">
+				<span class="ourTeam">©食分团队版权所有</span>
+                <span class="ourContact">
+                      <a href="#">关于我们</a>
+                      <a href="contact.html">联系我们</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--<footer class="footer">-->
+<!--<div class="container">-->
+<!--<div class="companyInfo">Bitmain</div>-->
+<!--</div>-->
+<!--</footer>-->
+</body>
+<script type='text/javascript' src="js/jquery.min.js"></script>
+<script type='text/javascript' src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+		var id=$.trim(getQueryString("id"));
+		var elementType=["momChild","snack","dairy","drink","instantDrink","healthy"]
+		if($.inArray(id,elementType)>=0){
+			$("#"+id).click();
+		}else{
+			$(".tbl-table tr.active").find("li").show();
+		}
+	})
+	 function showProduct(obj){
+		 obj.parent().parent().parent().siblings().removeClass("active")
+		 obj.parent().parent().parent().siblings().find('li').hide();
+		 obj.parent().parent().parent().addClass("active");
+		 obj.parent().find('li').toggle();
+		 obj.parent().find('li').removeClass("active");
+		 obj.parent().find('li').eq(0).addClass("active");
+	 }
+	function getQueryString(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) return unescape(r[2]); return null;
+	}
+	function tagSeleted(obj){
+		$(obj).addClass("active")
+		$(obj).siblings().removeClass("active");
+	}
+		function result(){
+			var keyword=$.trim($("#keywords").val())
+			window.location.href="result.html?key="+keyword;
+		}
+</script>
+</html>

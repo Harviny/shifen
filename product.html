@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+    <title>食分,健康真相, 从未如此接近</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="header-logo">食分</a>
+        <div class="header-content">健康真相, 从未如此接近</div>
+        <div class="header-nav">
+            <ul class="nav-content">
+                <div class="nav-search-panel">
+                    <input id="keywords" type="text" placeholder="输入食品名称或条码下方数字">
+                    <input type="button" value="搜索" onclick="result()">
+                </div>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="content">
+    <div class="container">
+        <div class="main-body">
+            <div class="row">
+                <div class="panel-body">
+                    <div class="p-nav">
+                        <a href="#"><span>全部商品</span>  >  </a>
+                        <a href="#"><span>休闲零食</span>  >  </a>
+                        <a href="#"><span>薯片薯条</span></a>
+                    </div>
+                    <div class="type-body p-body">
+                        <div class="tp-left">
+                             <div class="p-img">
+                                 <img src="images/kbk.jpg" width="300px">
+                             </div>
+                             <div class="p-info">
+                                 <div>
+                                     <span>保质期:</span>
+                                     <span>9个月</span>
+                                 </div>
+                                 <div>
+                                     <span>规格:</span>
+                                     <span>90 g</span>
+                                 </div>
+                             </div>
+                             <div class="p-info">
+                                <div>
+                                    <span>产地:</span>
+                                    <span>中国</span>
+                                </div>
+                                <div>
+                                    <span>指导价:</span>
+                                    <span>9.8 元</span>
+                                </div>
+                            </div>
+                             <div class="p-similar">评分更高的同类产品</div>
+                             <div class="ps-panel">
+                                 <div class="ps-left">
+                                     <img src="images/kbk.jpg" width="112px">
+                                     <div class="psl-point">10</div>
+                                 </div>
+                                 <div class="ps-right">
+                                     <div class="psr-name">乐事真脆薯条番茄味90克</div>
+                                     <div class="psr-mark">该产品配方无风险警示，可以放心购买</div>
+                                 </div>
+                             </div>
+                            <div class="ps-panel">
+                                <div class="ps-left">
+                                    <img src="images/kbk.jpg" width="112px">
+                                    <div class="psl-point">10</div>
+                                </div>
+                                <div class="ps-right">
+                                    <div class="psr-name">乐事真脆薯条番茄味90克</div>
+                                    <div class="psr-mark">
+                                        <span>糖尿病</span>
+                                        <span>冠心病</span>
+                                        <span>痤疮</span>
+                                        <span>等7个风险</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tp-right">
+                             <div class="tpr-name">乐事真脆薯条番茄味90克</div>
+                             <div class="tpr-point">7.2 分</div>
+                             <div class="tpr-healthPoint">健康指数</div>
+                             <div class="tpr-attrbute">
+                                 <div class="tpra-left">
+                                     <span>热量: 444千焦/18g</span>
+                                     <span class="color-block red">极高</span>
+                                 </div>
+                                 <div>含反式脂肪：0.6g/18g</div>
+                             </div>
+                            <div class="tpr-attrbute">
+                                <div class="tpra-left">
+                                    <span>含钠: 85mg/18g</span>
+                                    <span class="color-block yellow">高</span>
+                                </div>
+                                <div>含糖：0.6g/18g</div>
+                            </div>
+                            <div class="tpr-formula">
+                                <span>配方：</span>
+                                <span id="formula">马铃薯粉 精炼植物油 淀粉 变性淀粉 玉米粉 调味料（白砂糖 鸡肉粉 食用盐 谷氨酸钠 玉米淀粉 辣椒粉 酱油粉 复合香辛料 日落黄 柠檬黄） 食用盐 乳化剂 抗氧化剂 食用香料</span>
+                                <span onclick="showFormula()">展开全部↓</span>
+                            </div>
+                            <div class="tpr-Ingredient">
+                                <span>成分预警:</span>
+                                <span class="color-block grey">香精</span>
+                                <span class="color-block red">反式脂肪</span>
+                                <span class="color-block yellow">增稠剂</span>
+                            </div>
+                            <div class="panel-group" id="accordion">
+
+                                <div class="tpr-taboo">禁忌提示</div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#tab-1">
+                                                糖尿病
+                                        </h4>
+                                    </div>
+                                    <div id="tab-1" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            控制饮食，少食多餐;忌食血糖生成指数高的食物比如：白糖、红糖、葡萄糖、糖制品、甜食、果糖、蜂蜜等。
+                                            少食：土豆、芋头、奶油、猪油、羊油、黄油、花生、瓜子、动物内脏等。
+                                            宜食：粗杂粮（荞麦、豆麦、燕麦片、豆制品等），苦瓜也是很好的。
+                                            食物尽量多样化，宜粗不宜精。多食蔬菜、粗粮等，少吃油脂，盐及剌激性食物，如辣椒、咖啡、芥茉等。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#taboo-2">
+                                                痤疮
+                                        </h4>
+                                    </div>
+                                    <div id="taboo-2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            少吃含脂肪和糖类高的食物，忌食辛辣刺激性食物及避免饮酒，适当增加新鲜蔬菜及水果，忌用手挤压和乱用化妆品，这是痤疮的注意事项的最重要的地方。
+                                            养成良好的生活习惯，保证充足睡眠，保持精神和情绪的稳定，避免工作、学习过于紧张。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#taboo-3">
+                                                冠心病
+                                        </h4>
+                                    </div>
+                                    <div id="taboo-3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            冠心病人不适合摄入含糖、盐较多的食品，在日常饮食中应减少甜味饮品、奶油蛋糕、大量咸酱、咸菜等食物。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#taboo-4">
+                                                高血压
+                                        </h4>
+                                    </div>
+                                    <div id="taboo-4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            日常饮食治疗高血压高血压的饮食要求以低盐、低脂、低胆固醇、低热量为标准，以植物油为主，减少含饱和肪酸的肥肉或肉类制品，动物内脏含胆固醇高，应少吃，
+                                            多进食高维生素的食物，如蔬菜、水果、新鲜乳类。忌饮咖啡、浓茶、酒等刺激性食物，酒已被认为是高血压的发病因素应戒酒。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tpr-taboo">适宜提示</div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#tab-5">
+                                                低血糖
+                                        </h4>
+                                    </div>
+                                    <div id="tab-5" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            低血糖吃什么水果好？怎样饮食？
+                                            主要是含糖高的水果。水果中糖的含量如下，供参考：桃、西瓜、梨、橙子等口感甜的水果，其实际含糖量并不算高，属于低糖、中糖的水果。而口感酸甜的红果、大枣，却属于高糖水果，并不适合糖尿病病人食用。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#tab-6">
+                                                儿童
+                                        </h4>
+                                    </div>
+                                    <div id="tab-6" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            所谓儿童食品，也就是儿童专用食品，包括儿童调味品(酱油、味精)、儿童面条、奶粉伴侣、儿童饼干等。在中国，截至2015年初，儿童食品的质量标准尚不具备，一些不法商家为了降低生产成本，牟取暴利，
+                                            经常不顾儿童食品的质量和卫生安全，生产和销售假冒伪劣儿童食品，给儿童食品安全埋下了隐患，也导致了儿童食品市场混乱、食品安全难以保障的情况。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owner">
+                <span class="ourTeam">©食分团队版权所有</span>
+                <span class="ourContact">
+                      <a href="#">关于我们</a>
+                      <a href="contact.html">联系我们</a>
+				</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<footer class="footer">-->
+<!--<div class="container">-->
+<!--<div class="companyInfo">Bitmain</div>-->
+<!--</div>-->
+<!--</footer>-->
+</body>
+<script type='text/javascript' src="js/jquery.min.js"></script>
+<script type='text/javascript' src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    function showFormula() {
+        $("#formula").toggleClass("showformula");
+    }
+    function result(){
+        var keyword=$.trim($("#keywords").val())
+        window.location.href="result.html?key="+keyword;
+    }
+</script>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+  <title>食分,健康真相, 从未如此接近</title>
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+
+   <header class="header">
+      <div  href="index.html" class="container">
+         <a class="header-logo">食分</a>
+         <div class="header-content">健康真相, 从未如此接近</div>
+         <div class="header-nav">
+             <ul class="nav-content">
+                 <li><a href="type.html?id=momChild">母婴产品</a></li>
+                 <li><a href="type.html?id=dairy">乳制品</a></li>
+                 <li><a href="type.html?id=drink">饮料</a></li>
+                 <li><a href="type.html?id=instantDrink">冲调食品</a></li>
+                 <li><a href="type.html?id=snack">休闲零食</a></li>
+                 <li><a href="type.html?id=healthy">保健食品</a></li>
+             </ul>
+         </div>
+      </div>
+   </header>
+
+  <section class="content">
+      <div class="container">
+         <div class="main-body">
+             <div class="row">
+                 <div class="panel-body">
+                     <div class="search-body">
+                         <div class="search-label">大数据食品打分，10秒掌握食品健康评价</div>
+                         <div class="search-panel">
+                             <input type="text" placeholder="输入食品名称或条码下方数字">
+                             <input type="button" value="搜索" onclick="result()">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="owner">
+                 <span class="ourTeam">©食分团队版权所有</span>
+                 <span class="ourContact">
+                      <a href="#">关于我们</a>
+                      <a href="contact.html">联系我们</a>
+                 </span>
+             </div>
+         </div>
+      </div>
+  </section>
+
+  <!--<footer class="footer">-->
+     <!--<div class="container">-->
+        <!--<div class="companyInfo">Bitmain</div>-->
+     <!--</div>-->
+  <!--</footer>-->
+</body>
+<script type='text/javascript' src="js/jquery.min.js"></script>
+<script type='text/javascript' src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
+<script>
+    function result(){
+        var keyword=$.trim($("#keywords").val())
+        window.location.href="result.html?key="+keyword;
+    }
+</script>
